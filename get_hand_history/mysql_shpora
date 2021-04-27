@@ -1,0 +1,80 @@
+INSERT Products(ProductName, Manufacturer, ProductCount, Price) 
+VALUES ('iPhone X', 'Apple', 5, 76000);
+
+connection.commit()/conn.commit()/mydb.commit()  
+CREATE DATABASE db_name
+CREATE TABLE table_name (col_name col_type, ..., ... .)
+cursor.fetchall()
+
+i mean LIKE and REGEXP 
+smth like "%delimiter%" % скільки хоч символів то саме шо 'aaa' in 'cccaaaaaab' = True
+smth like "%delimiter1%delimiter%" ваще імба скільки хоч між ними скільки хоч після головне шоб в таком порядку були
+smth like "%delimiter___delimiter___%" піздєц 
+smth like "b___a" _ один сивол
+smth regexp 'delimiter' то саме шо 1
+regexp '^delimiter$' ^ значить опчаток строки $ значить кінець строки
+'a|b|c' або то эабо то э або то эа
+'[asd]b' ab abo as abo ab in string
+'[a-h]b ab bb cb db ... hb по алфавыту 
+ORDER BY field_name1, field_name2 DESC     #desc - mean in descending order, first sort by the field1 then by field2
+ORDER BY field_name1 DESC, field_name2 ... 
+SELECT * LIMIT 3 limit means only 3 first in range(3) 
+LIMIT 5, 10 meand in range(5, 10)
+
+
+дано:table1:field1, field2, 
+    table2:field1, field3, field4
+SELECT field2, t1.field1, field4 AS f4
+FROM table1 t1
+JOIN table2 t2
+    ON t1.field1 = t2.field1 
+
+це значить взяти в табл 1 і табл 2 ті рядки де співпадають їхні поля фіелд1,
+вони можуть бути названі по ріхному
+але в цьому прикладі використано ті самі імена для того шоб оказати шо буде помлика
+якшо ти береш і після селект пишеш імя поля яке є і в першій і в другій таблиці
+тому треба перед ним писати уточнення з якої вно таблиці
+і ше можна назву таблиці замінити на скорочення просто написавши його після 
+назви самої талиці і тоді можнга заміняти на це скорочення назву цієї таблиці 
+навіть перед тим як ти об'явив про це скорочення компілятор дуже зручнно прям всратись можна
+і ше поле фіелд 4 буде називатись ф4
+
+SELECT * FROM table1 t1, table2 t2
+WHERE ###condition###... 
+це то саме але для крутеликів
+
+SELECT...
+.....
+UNION
+SELECT...
+....
+об'єднати дві таблички вихдіні які получаться
+
+CREATE TABLE table_name AS
+SELECT ...
+....
+запхати результат селекту в табличку з іменем тейбл наме
+
+UPDATE table_name
+SET field_name = value, ...
+WHERE ###condition###
+замінити то шо було в ячейках на то шо хоч
+
+DELETE FROM table_name WHERE ###condition###
+
+TRUNCATE TABLE table_name; # ### reset all including AUTO INCREMENT SHIT to default and delete all data in table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
